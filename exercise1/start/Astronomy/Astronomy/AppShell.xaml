@@ -7,20 +7,26 @@
     xmlns:local="clr-namespace:Astronomy.Pages"
     FlyoutIcon="moon.png">
 
-    <TabBar>
+    <FlyoutItem Title="Astronomy" Icon="moon.png">
 
-        <Tab Title="Moon Phase" Icon="moon.png">
+        <ShellContent Title="Moon Phase" Icon="moon.png"
 
-            <ShellContent ContentTemplate="{DataTemplate local:MoonPhasePage}" />
+        ContentTemplate="{DataTemplate local:MoonPhasePage}"/>
 
-        </Tab>
+        
+        <ShellContent Title="Sunrise" Icon="sun.png"
 
-        <Tab Title="Sunrise" Icon="sun.png">
+        ContentTemplate="{DataTemplate local:SunrisePage}"/>
 
-            <ShellContent ContentTemplate="{DataTemplate local:SunrisePage}"/>
+    </FlyoutItem>
 
-        </Tab>
+    
+    <FlyoutItem Title="About" Icon="question.png">
 
-    </TabBar>
+        <ShellContent
+
+        ContentTemplate="{DataTemplate local:AboutPage}"/>
+
+    </FlyoutItem>
 
 </Shell>
